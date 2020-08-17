@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 
@@ -53,9 +52,7 @@ public class MainActivity extends AppCompatActivity {
         String randomJoke = jokes.getJoke();
 
         Intent intent = new Intent(this, JokesActivity.class);
-        intent.putExtra("jokes",randomJoke);
+        intent.putExtra("jokes", randomJoke);
         startActivity(intent);
     }
-
-
 }

@@ -10,17 +10,20 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+import com.nanodegree.jokesandroidlib.JokesActivity;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
-    private static MyApi myApiService = null;
+class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
+    public static MyApi myApiService = null;
     private Context context;
+    String text;
+
 
     @Override
-    protected String doInBackground(Pair<Context, String>... params) {
-        if(myApiService == null) {  // Only do this once
+    protected String doInBackground(Context... params) {
+        if (myApiService == null) {  // Only do this once
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
                     // options for running against local devappserver
@@ -38,11 +41,10 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
             myApiService = builder.build();
         }
 
-        context = params[0].first;
-        String name = params[0].second;
+        context = params[0];
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+            return myApiService.getRandomJokeService().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -50,6 +52,9 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        // Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        final Intent intent = new Intent(context, JokesActivity.class);
+        intent.putExtra("gce_result",result);
+        context.startActivity(intent);
     }
 }
