@@ -1,0 +1,26 @@
+ago 17, 2020 4:36:17 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFORMA??ES: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\aleco\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\aleco\Desktop\Backups Build it bigger\FinalProject2b\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+2020-08-17 16:36:17.573:INFO::main: Logging initialized @595ms to org.eclipse.jetty.util.log.StdErrLog
+2020-08-17 16:36:17.642:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+ago 17, 2020 2:36:17 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+ADVERT?NCIA: Your working directory, (C:\Users\aleco\Desktop\Backups Build it bigger\FinalProject2b\FinalProject\backend) is not equal to your 
+web application root (C:\Users\aleco\Desktop\Backups Build it bigger\FinalProject2b\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+2020-08-17 16:36:18.093:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_242-release-1644-b01
+2020-08-17 16:36:19.352:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@194fad1{/,file:///C:/Users/aleco/Desktop/Backups%20Build%20it%20bigger/FinalProject2b/FinalProject/backend/build/exploded-backend/,AVAILABLE}{C:\Users\aleco\Desktop\Backups Build it bigger\FinalProject2b\FinalProject\backend\build\exploded-backend}
+2020-08-17 16:36:19.353:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2020-08-17 16:36:19.353:INFO:oejs.session:main: node0 Scavenging disabled
+2020-08-17 16:36:19.375:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@731a74c{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-08-17 16:36:19.406:INFO:oejs.Server:main: Started @2428ms
+ago 17, 2020 2:36:19 PM com.google.appengine.tools.development.AbstractModule startup
+INFORMA??ES: Module instance default is running at http://localhost:8080/
+ago 17, 2020 2:36:19 PM com.google.appengine.tools.development.AbstractModule startup
+INFORMA??ES: The admin console is running at http://localhost:8080/_ah/admin
+ago 17, 2020 4:36:19 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFORMA??ES: Dev App Server is now running
+2020-08-17 16:37:10.014:INFO:oejs.AbstractConnector:pool-1-thread-1: Stopped NetworkTrafficSelectChannelConnector@731a74c{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-08-17 16:37:10.023:INFO:oejsh.ContextHandler:pool-1-thread-1: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@194fad1{/,file:///C:/Users/aleco/Desktop/Backups%20Build%20it%20bigger/FinalProject2b/FinalProject/backend/build/exploded-backend/,UNAVAILABLE}{C:\Users\aleco\Desktop\Backups Build it bigger\FinalProject2b\FinalProject\backend\build\exploded-backend}
+ago 17, 2020 4:37:10 PM com.google.appengine.tools.development.AbstractModule shutdown
+Shutting down.
+INFORMA??ES: Shutting down module instance default
